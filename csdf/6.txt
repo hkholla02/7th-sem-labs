@@ -1,0 +1,12 @@
+sudo apt-get install foremost
+fdisk -l
+foremost -v -q -t jpg -i /dev/sda1 -o downloads
+
+sudo apt-get install binwalk
+binwalk WhatsAppSetup.exe (-B)
+binwalk -e WhatsAppSetup.exe (extract)
+binwalk -E WhatsAppSetup.exe (entropy)
+binwalk -Me WhatsAppSetup.exe (recursive)
+binwalk -Mre WhatsAppSetup.exe (delete 0-size files)
+binwalk -f file.log WhatsAppSetup.exe (log)
+binwalk -W first.exe second.exe (difference)

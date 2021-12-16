@@ -1,0 +1,21 @@
+sudo apt-get install httrack webhttrack
+httrack https://www.rvce.edu.inf
+httrack https://www.rvce.edu.in/index.html +* -r6
+httrack https://www.rvce.edu.in --spider -P proxy.myhost.com:8080
+httrack --update (update a mirror)
+httrack --continue (continue a mirror)
+webhttrack (GUI)
+
+metasploitable -> cd /var/www/mutillidae -> sudo nano config.inc
+replace metasploitable by owasp10
+Kali
+Browser -> metasploitable ip -> mutillidae
+owasp10 -> A1 -> SQLi-extract data -> user info
+Browser -> preference -> network -> manual proxy -> 127.0.0.1:8080 -> enable ftp & https
+Burpsuit -> Proxy -> intercept on (if off)
+Browser -> mutillidae -> random credentials
+select all -> send to intruder
+Intruder -> positions -> clear -> select name -> add
+	 -> payloads -> load -> /usr/share/wordlist/wfuzz/injections/SQL.txt -> Start attack
+39
+ 

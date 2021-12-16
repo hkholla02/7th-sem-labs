@@ -1,0 +1,8 @@
+sudo apt-get install pipal
+pipal -t 10 passwords.txt
+pipal passwords.txt
+pipal --list-checkers
+
+sudo apt-get install cutycapt
+cutycapt --url=https://www.google.com --out=file.png
+

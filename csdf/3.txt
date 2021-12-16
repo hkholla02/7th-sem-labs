@@ -1,0 +1,14 @@
+sudo apt-get install john
+john --single --format=raw-sha1 file.txt
+john --wordlist=/usr/share/john/password.lst --format=raw-sha1 file.txt
+john --incremental file.txt
+cat /etc/shadow
+unshadow /etc/passwd /etc/shadow > file.txt
+john file.txt
+john --list=formats
+sudo adduser -r hello
+sudo passwd hello
+
+sudo apt-get install crunch
+crunch 2 3 nehal
+crunch 4 6 -p hello world ! (pattern)

