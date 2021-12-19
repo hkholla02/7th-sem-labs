@@ -1,0 +1,5 @@
+2 vehicles
+Asset -> create -> timeline
+Empty GameObj -> drag and drop timeline -> + -> animation track -> drag and drop vehicles
+Right click -> convert to clip track
++ -> track group -> activation track (add extra camera)
