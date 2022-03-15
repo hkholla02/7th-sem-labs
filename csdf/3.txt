@@ -10,5 +10,5 @@ sudo adduser -r hello
 sudo passwd hello
 
 sudo apt-get install crunch
-crunch 2 3 nehal
+crunch 2 3 someword
 crunch 4 6 -p hello world ! (pattern)
